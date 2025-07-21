@@ -10,9 +10,11 @@
     чем стили в медиазапросе предпочтений пользователя
   */
   --accent-color: #FF0070;
+  --title-shadow: #ff0070;
   --bg-image: url(../images/cover-image-dark.png);
   --bg-color: #000028;
   --text-color: #F1B2CE;
+  --text-color-buttom: #ff0070;
   --title-color: #DB00FF;
   --subtitle-color: #000028;
   --decorated-zone-hover: rgba(255, 0, 112, 0.4);
@@ -25,4 +27,14 @@
 
 .theme-auto .rec {
   display: block;
+}
+
+.theme-dark {
+  --accent-color: #ff0070;
+  --title-shadow: #ff0070;
+  --bg-image: url("../images/cover-image-dark.png");
+}
+
+.theme-dark .header__theme-menu-button {
+  color: var(--accent-color);
 }

@@ -10,11 +10,14 @@
     чем стили в медиазапросе предпочтений пользователя
   */
   --accent-color: #FF8DCB;
+  --title-shadow:#FF8DCB;
   --bg-image: url(../images/cover-image-light.png);
   --bg-color: #FFF1F7;
   --text-color: #353430;
+  --text-color-buttom: #353430;
   --title-color: #FFC2E6;
   --subtitle-color: #353430;
+  --subtitle-color_h2: #353430;
   --decorated-zone-hover: rgba(50, 49, 45, 0.4);
   --decorated: #353430;
 }
@@ -22,11 +25,14 @@
 @media (prefers-color-scheme: light) {
   :root {
     --accent-color: #FF8DCB;
+    --title-shadow:#FF8DCB;
     --bg-image: url(../images/cover-image-light.png);
     --bg-color: #FFF1F7;
     --text-color: #353430;
+    --text-color-buttom: #353430;
     --title-color: #FFC2E6;
     --subtitle-color: #353430;
+    --subtitle-color_h2: #353430;
     --decorated-zone-hover: rgba(50, 49, 45, 0.4);
     --decorated: #353430;
   }
@@ -45,16 +51,16 @@
 }
 
 .header__theme-menu-button {
-  color: var(--text-color);
+  color: var(--text-color-buttom);
 }
-.header__theme-menu-button_active {
+/*.header__theme-menu-button_active {
   outline: 1px solid var(--decorated);
 }
 .header__theme-menu-button:focus-visible {
   border-block-end: 1px solid var(--decorated);
-}
+}*/
 .section-title {
-  color: var(--subtitle-color);
+  color: var(--subtitle-color_h2);
 }
 .section-subtitle {
   color: var(--subtitle-color);
