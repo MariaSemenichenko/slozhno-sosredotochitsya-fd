@@ -20,7 +20,7 @@
   grid-template-columns: 1fr;
   grid-template-rows: 10px 1fr min-content 1fr 10px;
   padding: 10px;
-  block-size: 668px; /* new */
+  block-size: max(668px, 100vh); /* new2 */
 }
 
 .decorated-zone::after,
@@ -82,7 +82,7 @@
 }
 
 .header__theme-menu-button {
-  color: var(----text-color-buttom);
+  color: var(--text-color-buttom);
   font-size: var(--main-font-size);
   font-family: var(--main-font-family);
   line-height: 18px;
@@ -147,7 +147,7 @@
   gap: 50px;
   padding-block: 40px;
   padding-inline: 10px;
-  background-color: var(--bg-color);
+  /*background-color: var(--bg-color); убрала после ревью */
 }
 
 .section {
@@ -166,7 +166,7 @@
   font-size: var(--main-font-size);
   font-weight: 700;
   line-height: 23.4px;
-  color: var(--subtitle-color_h2);
+  color: var(--subtitle-color_section);
 }
 
 .section-text {
@@ -221,9 +221,9 @@
   position: relative;
   justify-content: center;
   align-items: center;
-  block-size: 668px; /* new */
+  block-size: max(668px, 100vh); /* new2 */
   padding: 10px;
-  background-color: var(--bg-color);
+  /*background-color: var(--bg-color); убрала после ревью */
 }
 
 .footer__title {
