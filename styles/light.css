@@ -38,6 +38,10 @@
   }
 }
 
+.rec {
+  display: none;
+}
+
 /*.decorated-zone::before {
   border-top: 1px solid var(--decorated);
   border-right: 1px solid var(--decorated);

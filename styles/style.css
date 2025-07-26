@@ -120,6 +120,8 @@
   font-weight: 700;
   line-height: 83%;
   text-shadow: 4px 4px 0 var(--title-shadow);
+  margin-block-start: 65px;
+  /*block-size: 180px;  его возможно нужно добавить */
 }
 
 .header__description {
@@ -238,7 +240,7 @@
   .header {
     grid-template-columns: 1fr min-content 364px;
     padding: 20px;
-    block-size: 1024px; /* new */
+    block-size: min(100vh, 1024px); /* new */
   }
   .decorated-zone::before {
     top: 20px;
@@ -255,20 +257,19 @@
 
   .header__theme-menu {
     grid-column: 3 / 3;
-    /*margin-top: 192px;*/
     margin-top: 161px;
   }
   .header__title {
     font-size: var(--font-size-standart);
     grid-column: span 3;
     margin-inline-start: -20px;
-    /*min-inline-size: 759px;*/
-
   }
   .header__description {
     grid-column: 3 / 3;
     justify-self: end;
     margin: 157px 0px;
+    top: 5px; /* new 2 */
+    position: relative;
   }
   .main {
     gap: 80px;
@@ -294,7 +295,9 @@
   }
   .advices-block {
     grid-column: 2 / 4;
-    inline-size: 472px; /* new */
+    inline-size: 472px;
+    position: relative;
+    left: 7px;
   }
   .section:last-child {
     display: grid;
@@ -338,10 +341,17 @@
   }
 
   .footer {
-    block-size: 1024px;
+    block-size: min(100vh, 1024px); /* new */
   }
   .footer__title {
     font-size: var(--font-size-standart);
+  }
+}
+
+
+@media (width > 768px) {
+  .advices-block {
+    inline-size: fit-content;
   }
 }
 
@@ -349,7 +359,7 @@
 
   .header {
     grid-template-columns: 2fr 1fr 1fr 2fr;
-    block-size: 768px;
+    block-size: min(100vh, 786px); /* new */
   }
 
   .header__theme-menu {
@@ -377,7 +387,7 @@
   .section-reasons {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto 1fr;
+     grid-template-rows: auto;
     gap: 10px;
   }
 
@@ -387,9 +397,9 @@
     margin-bottom: 10px;
   }
 
-  .reasons-block {
+  /*.reasons-block {
     grid-row: 2;
-  }
+  } */
 
   .reasons-block:nth-of-type(1) {
     grid-column: 1;
@@ -402,11 +412,12 @@
   }
 
   .advices-block {
-    inline-size: 649px; /* new */
+   inline-size: fit-content;
+   left: auto;
   }
 
   .footer {
-    block-size: 768px;
+    block-size: min(100vh, 786px);
   }
 
 }
