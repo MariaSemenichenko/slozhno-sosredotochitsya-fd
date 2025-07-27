@@ -240,7 +240,6 @@
   .header {
     grid-template-columns: 1fr min-content 364px;
     padding: 20px;
-    block-size: min(100vh, 1024px); /* new */
   }
   .decorated-zone::before {
     top: 20px;
@@ -340,9 +339,6 @@
     grid-area: title;
   }
 
-  .footer {
-    block-size: min(100vh, 1024px); /* new */
-  }
   .footer__title {
     font-size: var(--font-size-standart);
   }
@@ -359,7 +355,6 @@
 
   .header {
     grid-template-columns: 2fr 1fr 1fr 2fr;
-    block-size: min(100vh, 786px); /* new */
   }
 
   .header__theme-menu {
@@ -414,10 +409,6 @@
   .advices-block {
    inline-size: fit-content;
    left: auto;
-  }
-
-  .footer {
-    block-size: min(100vh, 786px);
   }
 
 }
